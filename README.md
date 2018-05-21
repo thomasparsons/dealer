@@ -1,2 +1,2 @@
-# dealer
+# Dealer
 A card dealer
