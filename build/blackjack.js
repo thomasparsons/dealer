@@ -36,5 +36,7 @@ function deal(props) {
 
 exports.default = {
   deal: deal,
-  hit: _.hit
+  hit: function hit(p) {
+    return (0, _.hit)(p);
+  }
 };
