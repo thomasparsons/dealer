@@ -5,7 +5,7 @@ gulp.task('build', () =>
   gulp.src([
     'lib/*.js',
     '!./{node_modules,node_modules/**}',
-    '!./{build,build/**}'
+    '!./{build,build/**}',
   ])
-  .pipe(babel())
-  .pipe(gulp.dest('build')));
+    .pipe(babel())
+    .pipe(gulp.dest('build')));

@@ -1,32 +1,40 @@
-import { hit } from './';
+'use strict';
 
-const INITIAL_HAND_SIZE = 2;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _ = require('./');
+
+var INITIAL_HAND_SIZE = 2;
 
 function deal(props) {
   if (!props || !props.deck) {
     throw new Error('blackjack requires a deck');
   }
 
-  const { deck, players } = props;
+  var deck = props.deck,
+      players = props.players;
+
 
   if (!players || Number.isNaN(players) || players < 2) {
     throw new Error('blackjack requires at least two players, including the dealer');
   }
 
-  const hands = [];
+  var hands = [];
 
-  for (let i = 0; i < players; i += 1) {
+  for (var i = 0; i < players; i += 1) {
     hands.push(deck.slice(0, INITIAL_HAND_SIZE));
     deck.splice(0, INITIAL_HAND_SIZE);
   }
 
   return {
     availableDeck: deck,
-    hands,
+    hands: hands
   };
 }
 
-export default {
-  deal,
-  hit,
+exports.default = {
+  deal: deal,
+  hit: _.hit
 };
