@@ -19,11 +19,11 @@ function hit(props) {
     throw new Error('there are not enough cards left');
   }
 
-  var card = deck.slice(0, size);
-  deck = deck.splice(0, size);
+  var cards = deck.slice(0, size);
+  deck = deck.splice(size, deck.length);
 
   return {
     deck: deck,
-    card: card
+    cards: cards
   };
 }

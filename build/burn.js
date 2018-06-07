@@ -9,7 +9,7 @@ function burn(props) {
     throw new Error('burn requires a deck');
   }
   var deck = props.deck;
-  var size = deck.size;
+  var size = props.size;
 
 
   size = size || 1;
@@ -19,6 +19,6 @@ function burn(props) {
   }
 
   return {
-    deck: deck.splice(0, size)
+    deck: deck.splice(size, deck.length)
   };
 }
