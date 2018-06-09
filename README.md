@@ -27,3 +27,12 @@ const deal = Blackjack.deal({ deck, players: 3 });
 console.log(deal);
 ```
 this will return you, the hands for each player, as well as the rest of the deck for future drawers and hands.
+
+You can then `hit` on the deal like so:
+
+```
+const deck = Deck({ shuffle: true });
+const deal = Blackjack.deal({ deck, players: 3 });
+console.log(Blackjack.hit({ deck: deal.availableDeck }));
+```
+

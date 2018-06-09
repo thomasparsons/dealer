@@ -17,7 +17,8 @@ function deal(props) {
       players = props.players;
 
 
-  if (!players || Number.isNaN(players) || players < 2) {
+  if (!players || isNaN(players) || // eslint-disable-line
+  players < 2) {
     throw new Error('blackjack requires at least two players, including the dealer');
   }
 
