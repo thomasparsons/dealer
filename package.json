@@ -12,11 +12,12 @@
     "lint": "eslint lib",
     "test": "jest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "deck": "github:thomasparsons/deck"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.6",
-    "babel-preset-es2015": "^6.24.1",
-    "deck": "github:thomasparsons/deck",
     "eslint": "^5.2.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
